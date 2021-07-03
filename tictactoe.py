@@ -21,12 +21,7 @@ def check(arr):
     elif count_nonzero(majordigonal == 'o')==3 :
         quit('\nYou Lose\n'+'THANK YOU'.center(100,'*'))
 
-    r=[]
-    for i in arr :
-        r.append(i[::-1])
-    arr2=array(r)
-
-    minordigonal=diag(arr2)
+    minordigonal=fliplr(arr).diagonal()
     if count_nonzero(minordigonal  == 'x')==3 :
         quit('\nYou Win\n'+'THANK YOU'.center(100,'*'))
     elif count_nonzero(minordigonal  == 'o')==3:
@@ -70,4 +65,3 @@ if __name__ == '__main__':
         printboard(arr)
         check(arr)
     print('\nTIE\n'+' THANK YOU '.center(100,'*'))
-
